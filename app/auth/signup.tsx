@@ -15,7 +15,7 @@ export default function SignUpScreen() {
 
   const handleSignUp = async () => {
     try {
-      const data = await fetchData<any>('api/v1/auth/signup', {
+      const data = await fetchData<any>('http://192.168.1.101:8000/api/v1/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password }),

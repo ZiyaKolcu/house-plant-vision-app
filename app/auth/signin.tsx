@@ -14,7 +14,7 @@ export default function SignInScreen() {
 
   const handleSignIn = async () => {
     try {
-      const data = await fetchData<any>('api/v1/auth/token', {
+      const data = await fetchData<any>('http://192.168.1.101:8000/api/v1/auth/token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
